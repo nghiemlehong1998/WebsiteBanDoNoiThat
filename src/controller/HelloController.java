@@ -9,4 +9,26 @@ public class HelloController {
 	public String NghiemLe() {
 		return "nghiemle";
 	}
+	@RequestMapping("admin")
+	public String admin()
+	{
+		return "/admin/index";
+	}
+	@RequestMapping("admin/products")
+	public String products()
+	{
+		return "/admin/products";
+	}
+	
+	@RequestMapping("admin/addproduct")
+	public String addProducts()
+	{
+		return "/admin/addproduct";
+	}
+	@RequestMapping("admin/users")
+	public String users()
+	{
+		return "/admin/users";
+	}
 }
+
