@@ -20,6 +20,7 @@ CREATE TABLE TinTuc(
 MaTinTuc INT IDENTITY PRIMARY KEY,
 TieuDe NVARCHAR(200),
 NoiDung NTEXT)
+
 --Bảng Liên hệ
 CREATE TABLE LienHe(
 MaLienHe INT IDENTITY PRIMARY KEY,
@@ -29,20 +30,18 @@ Email NVARCHAR(100),
 DienThoai NVARCHAR(20),
 TieuDe NVARCHAR(200),
 NoiDung NTEXT)
+
 --Bảng Users
 CREATE TABLE Users(
 TaiKhoan NVARCHAR(100) NOT NULL PRIMARY KEY,
 MatKhau NVARCHAR(100) NOT NULL,
 Email NVARCHAR(100),
-HoTen NVARCHAR(100,
+HoTen NVARCHAR(100),
 GioiTinh BIT,
 NgaySinh DATETIME,
 DienThoai INT,
 DiaChi NVARCHAR(200),
-TinhTP NVARCHAR(100),
-QuanHuyen NVARCHAR(100),
-NhomQuyen INT NOT NULL--0: admin, 1: Nhân viên 2: Khách hàng
-)
+QuanHuyen NVARCHAR(100))
 --Bảng đơn hàng
 
 CREATE TABLE DonHang(
@@ -50,7 +49,7 @@ MaDonHang INT IDENTITY PRIMARY KEY,
 NgayDatHang DATETIME,
 HoTen NVARCHAR(100),
 DiaChi NVARCHAR(200),
-Email NVARCHAR(100)
+Email NVARCHAR(100),
 DienThoai INT,
 SoLuongSanPham INT,
 TongTien FLOAT)
