@@ -19,6 +19,7 @@
                     <th>Địa chỉ</th>
                     <th>Số điện thoại</th>
                     <th>Nhóm quyền</th>
+                    <th>Chỉnh sửa</th>
                   </tr>
                 </thead>
                 <tfoot>
@@ -29,16 +30,29 @@
                     <th>Địa chỉ</th>
                     <th>Số điện thoại</th>
                     <th>Nhóm quyền</th>
+                    <th>Chỉnh sửa</th>
                   </tr>
                 </tfoot>
                 <tbody>
                 <c:forEach var= "u" items="${Users}">
                   <tr>
                     <td>${u.getHoTen() }</td>
-                <%--   	<td>${u.isGioiTinh() }</td> --%>
-                  	<%-- <td>${u.getNgaySinh() }</td> --%>
-                  <%-- 	<td>${u.getDiaChi() }</td>
-                  	<td>${u.getDienThoai() }</td>  --%>
+              		<td>
+              			<c:choose>
+							<c:when test="${u.isGioiTinh() == true }">Nam</c:when>
+							<c:when test="${u.isGioiTinh() == false }">Nữ</c:when>
+						</c:choose>
+              		</td>
+                  	<td>${u.getNgaySinh() }</td>
+                  	<td>${u.getDiaChi() }</td>
+                  	<td>${u.getDienThoai() }</td>  
+                  	 <td></td> 
+                    <td>
+                    	</div>
+			 				<button type="submit" class="btn btn-primary mb-2">Sửa thông tin</button>
+						</div>
+					
+                    </td> 
                   	              					                 
                   </tr>
                   </c:forEach>

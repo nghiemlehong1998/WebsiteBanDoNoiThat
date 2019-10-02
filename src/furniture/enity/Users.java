@@ -1,6 +1,8 @@
 package furniture.enity;
 
-import java.sql.Date;
+
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +20,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name="Users")
 public class Users {
 	@Id @GeneratedValue
-	@Column(name="MaiTaiKhoan")
+	@Column(name="MaTaiKhoan")
 	private int maTaiKhoan;
 	@Column(name="TaiKhoan")
 	private String taiKhoan;

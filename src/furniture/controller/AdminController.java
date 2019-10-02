@@ -21,7 +21,6 @@ import furniture.enity.Users;
 public class AdminController {
 	@Autowired
 	SessionFactory factory;
-	SessionFactory factory1;
 	
 	@RequestMapping("nghiemdet")
 	public String NghiemLe() {
