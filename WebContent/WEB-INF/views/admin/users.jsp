@@ -46,9 +46,10 @@
                   	<td>${u.getNgaySinh() }</td>
                   	<td>${u.getDiaChi() }</td>
                   	<td>${u.getDienThoai() }</td>  
-                  	 <td></td> 
+                  	<td>${u.getMaNhomQuyen().getTenNhomQuyen() }</td> 
                     <td>
-                    		<button  type="submit" class="btn btn-primary mb-2">Sửa thông tin</button>	
+                    		<button  type="submit" class="btn btn-primary mb-2" data-toggle="modal"
+						data-target="#editModal">Sửa thông tin</button>	
                     		<button  type="submit" class="btn btn-primary mb-2">Xóa</button>	                        				
                     </td> 
                   	              					                 
@@ -56,12 +57,37 @@
                   </c:forEach>
                 </tbody>
               </table>
+              
+              
+              
             </div>
           </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
         	
-
+	<!--Edit modal  -->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     		   <c:forEach var= "u" items="${Users}">
+     		   		<c:choose></c:choose>
+     		   </c:forEach>
+     		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
         <p class="small text-center text-muted my-5">
           <em>More table examples coming soon...</em>
         </p>
