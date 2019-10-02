@@ -50,6 +50,7 @@ public class AdminController {
 	@RequestMapping("admin/users")
 	public String users(ModelMap model)
 	{	
+		
 		Session session = factory.getCurrentSession();
 		String hql ="FROM Users";
 		Query query = session.createQuery(hql);

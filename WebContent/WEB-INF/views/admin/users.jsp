@@ -19,7 +19,7 @@
                     <th>Địa chỉ</th>
                     <th>Số điện thoại</th>
                     <th>Nhóm quyền</th>
-                    <th>Chỉnh sửa</th>
+                    <th style="width:165px;">Chỉnh sửa</th>
                   </tr>
                 </thead>
                 <tfoot>
@@ -48,10 +48,8 @@
                   	<td>${u.getDienThoai() }</td>  
                   	 <td></td> 
                     <td>
-                    	</div>
-			 				<button type="submit" class="btn btn-primary mb-2">Sửa thông tin</button>
-						</div>
-					
+                    		<button  type="submit" class="btn btn-primary mb-2">Sửa thông tin</button>	
+                    		<button  type="submit" class="btn btn-primary mb-2">Xóa</button>	                        				
                     </td> 
                   	              					                 
                   </tr>
@@ -62,9 +60,11 @@
           </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
+        	
 
         <p class="small text-center text-muted my-5">
           <em>More table examples coming soon...</em>
         </p>
+        		
 
 <jsp:include page="footer/footer.jsp"></jsp:include>
