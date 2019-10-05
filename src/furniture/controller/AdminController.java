@@ -2,6 +2,7 @@ package furniture.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
 import org.hibernate.Query;
@@ -12,12 +13,17 @@ import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+
 import furniture.enity.DanhMucSanPham;
-import furniture.enity.NhomQuyen;
 import furniture.enity.Users;
+
+
 
 @Transactional
 @Controller
+
+
 public class AdminController {
 	@Autowired
 	SessionFactory factory;
@@ -46,18 +52,21 @@ public class AdminController {
 		model.addAttribute("DanhMucSanPham", list);	
 		return "/admin/addproduct";
 	}
-	
 	@RequestMapping("admin/users")
 	public String users(ModelMap model)
-	{	
-		
-		Session session = factory.getCurrentSession();
+	{	Session session = factory.getCurrentSession();
 		String hql ="FROM Users";
 		Query query = session.createQuery(hql);
 		List <Users> list = query.list();
 		model.addAttribute("Users", list);	
 		return "/admin/users";
 	}
+	
+
+	
+	
+	
+
 	
 	
 }

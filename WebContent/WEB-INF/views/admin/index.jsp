@@ -1,7 +1,6 @@
 <%@ page pageEncoding="UTF-8"%>
 <jsp:include page="header/header.jsp"></jsp:include>
        
-
         <!-- Icon Cards-->
         <div class="row">
           <div class="col-xl-3 col-sm-6 mb-3">
