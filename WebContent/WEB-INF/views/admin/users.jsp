@@ -13,13 +13,14 @@
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Họ tên</th>
+                    <th >Họ tên</th>
                     <th>Giới tính</th>
                     <th>Ngày sinh</th>
+                    <th>Email</th>
                     <th>Địa chỉ</th>
                     <th>Số điện thoại</th>
                     <th>Nhóm quyền</th>
-                    <th style="width:165px;">Chỉnh sửa</th>
+                    <th>Chỉnh sửa</th>
                   </tr>
                 </thead>
                 <tfoot>
@@ -27,6 +28,7 @@
                     <th>Họ tên</th>
                     <th>Giới tính</th>
                     <th>Ngày sinh</th>
+                    <th>Email</th>
                     <th>Địa chỉ</th>
                     <th>Số điện thoại</th>
                     <th>Nhóm quyền</th>
@@ -44,19 +46,50 @@
 						</c:choose>
               		</td>
                   	<td>${u.getNgaySinh() }</td>
+                  	<td>${u.getEmail() }</td>
                   	<td>${u.getDiaChi() }</td>
                   	<td>${u.getDienThoai() }</td>  
                   	<td>${u.getMaNhomQuyen().getTenNhomQuyen() }</td>
 					<td>
 						<form action="/WebsiteBanDoNoiThat/admin/edit-user.htm" method="post">
-							<button name= "btnEdit" value="${u.getMaTaiKhoan() }" type="submit" class="btn btn-primary mb-2" >Sửa thông tin</button>
+							<button id="btnEditUser" name= "btnEdit" value="${u.getMaTaiKhoan() }" type="submit" class="btn btn-primary mb-2" >Sửa thông tin</button>
 						</form>	
 						
-							<button type="submit" class="btn btn-primary mb-2">Xóa</button>
-						
+					
+						<!-- Button trigger modal -->
+							<form>
+								<button id="buttonDelete" type="button" class="btn btn-primary"  data-toggle="modal"
+								 	data-target="#deleteModal" value="${u.getMaTaiKhoan() }" name="btnDeleteUser" >Xóa</button> 
+							</form>
 							
-									
-					</td>
+							<!-- Modal -->
+								<div class="modal fade" id="deleteModal" tabindex="-1"
+									role="dialog" aria-labelledby="exampleModalLabel"
+									aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">Bạn muốn xóa thành viên?</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-dismiss="modal">No</button>
+												<form action="/WebsiteBanDoNoiThat/admin/delete-user.htm" method="post" >
+													<button  id="buttonYes" type="submit" class="btn btn-primary" name="btnYesDeleteUser">Yes</button>
+												</form>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+							</td>
 						</tr>
                   </c:forEach>
                 </tbody>
@@ -78,6 +111,22 @@
         <p class="small text-center text-muted my-5">
           <em>More table examples coming soon...</em>
         </p>
-        		
+<script>   
+
+		document.getElementById('buttonDelete').addEventListener('click', inputCopied);
+
+		function inputCopied() {
+			var user = document.getElementById('buttonDelete');
+			var copied = document.getElementById('buttonYes');
+
+		copied.value = user.value;
+		//Or 
+		//copied.innerHTML = user.value;
+	}
+</script>
+<!--
+
+//-->
+</script>     		
 
 <jsp:include page="footer/footer.jsp"></jsp:include>

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import furniture.enity.DanhMucSanPham;
 import furniture.enity.Users;
@@ -61,6 +61,8 @@ public class AdminController {
 		model.addAttribute("Users", list);	
 		return "/admin/users";
 	}
+	
+
 	
 
 	

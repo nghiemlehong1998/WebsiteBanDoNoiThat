@@ -4,7 +4,7 @@
 <jsp:include page="header/header.jsp"></jsp:include>
 
 
-<form action="/WebsiteBanDoNoiThat/admin/users.htm" method="post">
+<form action="/WebsiteBanDoNoiThat/admin/edit-user2.htm" method="post">
 	<div>
 	</div>
 	<div class="modal-header">
@@ -36,7 +36,11 @@
 					</c:choose>					
 				</select>
 				
-		
+			<div class="form-group">
+				<label for="formGroupExampleInput">Ngày sinh</label> 
+				 <input name="ngaySinh" class="form-control" type="date" value="${user.getNgaySinh() }" id="example-date-input">
+			</div>
+			
 			<div class="form-group">
 				<label for="formGroupExampleInput">Địa chỉ</label> 
 				<input name="diaChi" type="text" class="form-control" id="formGroupExampleInput" placeholder="Địa chỉ" value="${user.getDiaChi() }">
