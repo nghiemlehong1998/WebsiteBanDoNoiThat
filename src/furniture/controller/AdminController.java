@@ -15,8 +15,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import furniture.enity.DanhMucSanPham;
-import furniture.enity.Users;
+import furniture.entity.DanhMucSanPham;
+import furniture.entity.Users;
 
 
 
@@ -37,13 +37,13 @@ public class AdminController {
 	{
 		return "/admin/index";
 	}
-	@RequestMapping("admin/products")
+	@RequestMapping(value = "admin/products",method = RequestMethod.POST)
 	public String products()
 	{
 		return "/admin/products";
 	}
 	
-	@RequestMapping("admin/addproduct")
+	@RequestMapping(value = "admin/addproduct",method = RequestMethod.POST)
 	public String addProducts(ModelMap model){	
 		Session session = factory.getCurrentSession();
 		String hql ="FROM DanhMucSanPham";

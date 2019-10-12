@@ -14,16 +14,16 @@
 <title>SB Admin - Dashboard</title>
 
 <!-- Custom fonts for this template-->
-<link href="/WebsiteBanDoNoiThat/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+<link href="/WebsiteBanDoNoiThat/static/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
 	type="text/css">
 
 
 <!-- Page level plugin CSS-->
-<link href="/WebsiteBanDoNoiThat/vendor/datatables/dataTables.bootstrap4.css"
+<link href="/WebsiteBanDoNoiThat/static/admin/vendor/datatables/dataTables.bootstrap4.css"
 	rel="stylesheet">
 
 <!-- Custom styles for this template-->
-<link href="/WebsiteBanDoNoiThat/css/sb-admin.css" rel="stylesheet">
+<link href="/WebsiteBanDoNoiThat/static/admin/css/sb-admin.css" rel="stylesheet">
 
 </head>
 
@@ -31,8 +31,7 @@
 
 	<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-		<a class="navbar-brand mr-1" href="/WebsiteBanDoNoiThat/admin.htm">Website bán nội
-			thất</a>
+		<a class="navbar-brand mr-1" href="/WebsiteBanDoNoiThat/admin.htm">Trang quản trị</a>
 
 		<button class="btn btn-link btn-sm text-white order-1 order-sm-0"
 			id="sidebarToggle" href="#">
@@ -113,8 +112,14 @@
 					<span>Products</span>
 				</a>
 				<div class="dropdown-menu" aria-labelledby="pageProducts">
-					<a class="dropdown-item" href="/WebsiteBanDoNoiThat/admin/products.htm">Xem sản phẩm</a>
-					<a class="dropdown-item" href="/WebsiteBanDoNoiThat/admin/addproduct.htm">Thêm sản phẩm</a>
+					<form action="/WebsiteBanDoNoiThat/admin/products.htm" method="POST">
+						<a  href="#" onclick="this.parentNode.submit()" class="dropdown-item">Xem sản phẩm</a>
+					</form>
+					<form action="/WebsiteBanDoNoiThat/admin/addproduct.htm" method="POST">
+						<a  href="#" onclick="this.parentNode.submit()" class="dropdown-item">Thêm sản phẩm</a>
+					</form>
+						
+
 				</div>
 			</li>
 			<li class="nav-item dropdown" >

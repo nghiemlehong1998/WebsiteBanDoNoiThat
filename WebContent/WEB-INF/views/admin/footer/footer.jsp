@@ -42,23 +42,23 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="/WebsiteBanDoNoiThat/vendor/jquery/jquery.min.js"></script>
-  <script src="/WebsiteBanDoNoiThat/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/WebsiteBanDoNoiThat/static/admin/vendor/jquery/jquery.min.js"></script>
+  <script src="/WebsiteBanDoNoiThat/static/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="/WebsiteBanDoNoiThat/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="/WebsiteBanDoNoiThat/static/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="/WebsiteBanDoNoiThat/vendor/chart.js/Chart.min.js"></script>
-  <script src="/WebsiteBanDoNoiThat/vendor/datatables/jquery.dataTables.js"></script>
-  <script src="/WebsiteBanDoNoiThat/vendor/datatables/dataTables.bootstrap4.js"></script>
+  <script src="/WebsiteBanDoNoiThat/static/admin/vendor/chart.js/Chart.min.js"></script>
+  <script src="/WebsiteBanDoNoiThat/static/admin/vendor/datatables/jquery.dataTables.js"></script>
+  <script src="/WebsiteBanDoNoiThat/static/admin/vendor/datatables/dataTables.bootstrap4.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="/WebsiteBanDoNoiThat/js/sb-admin.min.js"></script>
+  <script src="/WebsiteBanDoNoiThat/static/admin/js/sb-admin.min.js"></script>
 
   <!-- Demo scripts for this page-->
-  <script src="/WebsiteBanDoNoiThat/js/demo/datatables-demo.js"></script>
-  <script src="/WebsiteBanDoNoiThat/js/demo/chart-area-demo.js"></script>
+  <script src="/WebsiteBanDoNoiThat/static/admin/js/demo/datatables-demo.js"></script>
+  <script src="/WebsiteBanDoNoiThat/static/admin/js/demo/chart-area-demo.js"></script>
 
 </body>
 

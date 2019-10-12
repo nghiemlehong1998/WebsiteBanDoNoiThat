@@ -34,7 +34,7 @@
 	       </props>
 	    </property>
 	 
-		<property name="packagesToScan" value="furniture.enity"/>
+		<property name="packagesToScan" value="furniture.entity"/>
 	</bean>
 	
 	<!-- Transaction Manager -->
